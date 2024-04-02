@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lieferando</title>
+    <link rel="icon" type="image/svg+xml" href="assets/logo_favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fonts.css" />
+    <script defer src="script.js"></script>
+</head>
+
+<body onload="render()">
+
+    <div onclick="orderMenu()" class="container_bg d_none">
+        <div onclick="doNotClose(event)" class="order_done">
+            <div class="top_dialog">
+                <div class="test">
+                    <h3>Vielen Dank</h3>
+                    <div class="round_bg"><span onclick="orderMenu()" class="width_icon">&times;</span></div>
+                </div>
+                <p class="text_orderDone">Deine Bestellung ist eingegangen und wird in Kürze bearbeitet</p>
+            </div>
+            <button onclick="orderMenu()" class="button_style">Schließen</button>
+        </div>
+        <!-- render in js -->
+    </div>
+
+    <section id="header" class="d_flex_c">
+        <header class="pad_section d_flex_c">
+            <div class="header d_flex_sb_c">
+                <div class="header_left">
+                    <a href="#"><img class="icon_header invert_svg" src="assets/arrow_left.svg" alt="arrow left"></a>
+                    <a href="#"><img class="lieferando_header" src="assets/logo_text.png" alt="lieferando icon"></a>
+                    <a href="#"><img class="logo_header d_none" src="assets/logo1.png" alt="lieferando icon"></a>
+                </div>
+                <p>Speisekarte</p>
+                <nav class="header_right">
+                    <a href="#"><img class="icon_header" src="assets/flag_germany_icon.svg" alt="german flag"></a>
+                    <a href="#"><img class="icon_header" src="assets/burger_icon.svg" alt="burger menu"></a>
+                </nav>
+            </div>
+        </header>
+    </section>
+
+    <section class="d_flex_c">
+        <div class="main_part">
+            <div id="restaurant">
+                <div class="basic_information">
+                    <img class="head_img" src="img/pizzeria.jpg" alt="pizzeria">
+                    <div id="head_main_part" class="pad_section">
+                        <div class="restaurant_logo">
+                            <p>Pizza Connection</p>
+                        </div>
+                        <div class="head_information_top">
+                            <p class="restaurant_name">Pizza Connection</p>
+                            <div id="icons_information">
+                                <div class="round_bg"><img class="width_icon" src="assets/info_icon.svg"
+                                        alt="information icon"></div>
+                                <div class="round_bg"><img class="width_icon" src="assets/heart1_icon.svg"
+                                        alt="heart icon"></div>
+                            </div>
+                        </div>
+                        <div class="head_information_bottom">
+                            <div class="first_row">
+                                <div class="star_icons">
+                                    <img class="width_icon" src="assets/star.svg" alt="star icon">
+                                    <img class="width_icon" src="assets/star.svg" alt="star icon">
+                                    <img class="width_icon" src="assets/star.svg" alt="star icon">
+                                    <img class="width_icon" src="assets/star.svg" alt="star icon">
+                                    <img class="width_icon" src="assets/star.svg" alt="star icon">
+                                </div>
+                                <a href="#">12 Bewertungen</a>
+                            </div>
+                            <div class="second_row">
+                                <img class="width_icon" src="assets/shop_icon.svg" alt="basket icon">
+                                <p>Min. 15,00 €</p>
+                                <img class="dot_icon" src="assets/dot_icon.svg" alt="dot">
+                                <img class="width_icon" src="assets/bycicle.png" alt="bycicle icon">
+                                <p>3,00 €</p>
+                                <img class="dot_icon" src="assets/dot_icon.svg" alt="dot">
+                                <p class="text_responsive">Es fallen zusätzliche Gebühren an</p>
+                                <img class="width_icon" src="assets/info_icon.svg" alt="information icon">
+                                <!-- render in js -->
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="menu_slider pad_section">
+                    <div class="round_bg"><img src="assets/search_icon.svg" alt="search icon" class="width_icon"></div>
+                    <a class="link_slider" href="#top_selection0">Pizza</a>
+                    <a class="link_slider" href="#top_selection1">Nudeln</a>
+                    <a class="link_slider" href="#top_selection2">Suppe</a>
+                    <div class="round_bg"><img src="assets/more_icon.svg" alt="more info icon" class="width_icon"></div>
+                </div>
+                <div id="menu_selection" class="d_flex_d_co_c">
+                    <!-- render in js -->
+
+                </div>
+            </div>
+            <div id="shopping_cart" class="shopping_cart pad_section d_flex_d_co_c">
+                <div class="headline_buttons">
+                    <div onclick="openBasketMobile()" class="round_bg close_basket d_none"><span
+                            class="width_icon">&times;</span></div>
+                    <h3 class="headline_shopping_cart">Warenkorb</h3>
+                    <div class="buttons">
+                        <button onclick="changeButton(), changeTextBack()"
+                            class="choice_button active_button delievery_button">
+                            <img class="width_icon" src="assets/bycicle_orange.png" alt="delievery icon">
+                            <div class="button_text">
+                                <p class="text_button">Lieferung</p>
+                                <p class="text_button">ab 12:15</p>
+                            </div>
+                        </button>
+                        <button onclick="changeButton(), changeText()"
+                            class="choice_button passive_button pickUp_button">
+                            <img class="width_icon" src="assets/collect_icon.svg" alt="pick up icon">
+                            <div class="button_text">
+                                <p class="text_button">Abholung</p>
+                                <p class="text_button">ab 11:45</p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <div class="basket">
+                    <!-- render in js -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="d_flex_d_co_c">
+        <div class="d_flex_d_co_c">
+            <div class="links_footer">
+                <a class="link_footer" href="#">AGB</a>
+                <a class="link_footer" href="#">Datenschutzerklärung</a>
+                <a class="link_footer" href="#">Impressum</a>
+            </div>
+            <p class="text_footer">© 2024 Lieferando.de</p>
+        </div>
+    </footer>
+
+    <div class="footer_basket">
+        <!-- render in js -->
+    </div>
+</body>
+
+</html>
